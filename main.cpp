@@ -174,7 +174,6 @@ class set{
             
             //cout<<"tocmai ai apelat constructorul de copiere"<<endl;
             n = rhs.n;
-            delete [] arr;
             arr = new int[n ];
 
             for(int i = 0; i < n; i++){
@@ -440,7 +439,7 @@ int main(){
         }
         
         case 4:{ // adaugare de elemente intr o multime
-            int x;
+
             cout<<"tasteaza multimea careia doresti sa ii adaugi elemente"<<endl;
             int set_to_add;
             cin>>set_to_add;
@@ -455,7 +454,7 @@ int main(){
         }
     
         case 5:{ // eliminarea de elemente intr o multime
-            int x;
+        
             cout<<"tasteaza multimea careia doresti sa ii elimini elemente"<<endl;
             int set_to_modify;
             cin>>set_to_modify;
