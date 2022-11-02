@@ -159,7 +159,7 @@ class set{
         return is;
     }
     
-        friend ostream& operator<<(ostream &os, set &s) {
+        friend ostream& operator<<(ostream &os, set const &s) {
           for(int i = 0; i < s.n; i++)
             os << s.arr[i] << " ";
           os << endl;
@@ -341,12 +341,14 @@ class set{
 
 
 int main(){
+    // pt a oprii warningurile de functii nefolosite
     set s;
     s.lenght_setter(3);
     s.set_setter(3,1,2,3);
     s.element_setter(2,2);
     s.get_set();
     s.get_lenght();
+    s.add(1,6);
 
     int parameter = 11;
     set * SET;
