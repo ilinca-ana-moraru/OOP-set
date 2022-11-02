@@ -150,7 +150,6 @@ class set{
 
         friend istream& operator>>(istream &is, set &s) {
 
-        int x;
         is >> s.n;
         s.lenght_setter(s.n);
         
