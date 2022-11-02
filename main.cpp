@@ -348,7 +348,7 @@ int main(){
     s.get_set();
     s.get_lenght();
 
-    int parameter;
+    int parameter = 11;
     set * SET;
     int nr_of_sets = 0;
     int a = 1;
