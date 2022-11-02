@@ -120,7 +120,6 @@ class set{
         //setter de elemente ale multimii
         void set_setter (int N, ...){
 
-            delete [] arr;
             va_list args;
             va_start(args, N);
             delete [] arr;
@@ -285,7 +284,7 @@ class set{
                 else if(arr[i] < rhs.arr[j])
                     i++;
                 
-                else if(arr[i] > rhs.arr[j])
+                else //if(arr[i] > rhs.arr[j])
                     j++;
             }
             
@@ -312,7 +311,8 @@ class set{
                     
                 }
                 
-                else if(arr[i] < rhs.arr[j]){
+                else //if(arr[i] < rhs.arr[j])
+                {
                     aux.arr[k] = arr[i];
                     i++;
                     k++;
@@ -341,6 +341,13 @@ class set{
 
 
 int main(){
+    set s;
+    s.lenght_setter(3);
+    s.set_setter(3,1,2,3);
+    s.element_setter(2,2);
+    s.get_set();
+    s.get_lenght();
+
     int parameter;
     set * SET;
     int nr_of_sets = 0;
@@ -349,12 +356,12 @@ int main(){
     while(a){
         cout <<" -------------------------------------------------";
         if(nr_of_sets)
-            cout<<endl<<"in acest moment lucram cu multimile:"<<endl<<endl;
+            {cout<<endl<<"in acest moment lucram cu multimile:"<<endl<<endl;
             
         for(int i = 0; i < nr_of_sets; i++){
             cout<<"multimea "<<i+1<<":";
             cout << SET[i];
-        }
+        }}
          cout <<endl;
         cout<<"tasteaza: "<<" | -1 -> incheierea jocului "<<"| 1 -> adaugare de multime "<<
         "| 2 -> eliminare de multime "<<"| 3 -> copiere de multime intr o noua multime "
